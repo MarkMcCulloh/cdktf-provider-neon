@@ -22,7 +22,6 @@
     "package:go": "npx projen package:go",
     "package:java": "npx projen package:java",
     "package:js": "npx projen package:js",
-    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
@@ -93,10 +92,6 @@
           "groupId": "com.hashicorp",
           "artifactId": "cdktf-provider-neon"
         }
-      },
-      "python": {
-        "distName": "Chriscbr-cdktf-provider-neon",
-        "module": "Chriscbr_cdktf_provider_neon"
       },
       "dotnet": {
         "namespace": "HashiCorp.Cdktf.Providers.Neon",

@@ -142,34 +142,6 @@ jobs:
         run: cd .repo && npx projen package:java
       - name: Collect java Artifact
         run: mv .repo/dist dist
-  package-python:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions: {}
-    if: "! needs.build.outputs.self_mutation_happened"
-    steps:
-      - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
-        with:
-          node-version: 18.x
-      - uses: actions/setup-python@bd6b4b6205c4dbad673328db7b31b7fab9e241c0
-        with:
-          python-version: 3.x
-      - name: Download build artifacts
-        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
-        with:
-          name: build-artifact
-          path: dist
-      - name: Restore build artifact permissions
-        run: cd dist && setfacl --restore=permissions-backup.acl
-        continue-on-error: true
-      - name: Prepare Repository
-        run: mv dist .repo
-      - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
-      - name: Create python artifact
-        run: cd .repo && npx projen package:python
-      - name: Collect python Artifact
-        run: mv .repo/dist dist
   package-dotnet:
     needs: build
     runs-on: ubuntu-latest
