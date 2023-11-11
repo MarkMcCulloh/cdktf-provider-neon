@@ -1,4 +1,4 @@
-import { CdktfProviderProject } from "@cdktf/provider-project";
+const { CdktfProviderProject } = require("@cdktf/provider-project");
 
 const project = new CdktfProviderProject({
   author: "Chris Rybicki",
@@ -9,7 +9,7 @@ const project = new CdktfProviderProject({
   devDeps: ["@cdktf/provider-project@^0.3.0"],
   jsiiVersion: "^5.0.0",
   name: "@rybickic/provider-neon",
-  projenrcTs: true,
+  projenrcTs: false,
   repositoryUrl: "https://github.com/chrisr/provider-neon.git",
   terraformProvider: "kislerdm/neon@~> 0.2",
   description: "CDKTF provider for kislerdm/neon",
