@@ -3,7 +3,7 @@
 
 This repo builds and publishes the Terraform neon Provider bindings for [CDK for Terraform](https://cdk.tf).
 
-
+Is based directly on neon 0.2.5
 
 ## Available Packages
 
@@ -63,7 +63,7 @@ This project is explicitly not tracking the Terraform neon Provider version 1:1.
 These are the upstream dependencies:
 
 - [Terraform CDK](https://cdk.tf)
-- [Terraform neon Provider](https://registry.terraform.io/providers/kislerdm/neon/0.2.0)
+- [Terraform neon Provider](https://registry.terraform.io/providers/kislerdm/neon/0.2.5)
     - This links to the minimum version being tracked, you can find the latest released version [in our releases](https://github.com/cdktf/cdktf-provider-neon/releases)
 - [Terraform Engine](https://terraform.io)
 
