@@ -7,6 +7,7 @@
     },
     {
       "name": "@cdktf/provider-project",
+      "version": "^0.3.0",
       "type": "build"
     },
     {
@@ -16,17 +17,17 @@
     },
     {
       "name": "cdktf-cli",
-      "version": "0.19",
+      "version": "^0.19.0",
       "type": "build"
     },
     {
       "name": "cdktf",
-      "version": "0.19",
+      "version": "^0.19.0",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "10.3.0",
+      "version": "^10.3.0",
       "type": "build"
     },
     {
@@ -54,7 +55,7 @@
     },
     {
       "name": "jsii",
-      "version": "~5.0.0",
+      "version": "^5.0.0",
       "type": "build"
     },
     {
@@ -91,12 +92,12 @@
     },
     {
       "name": "cdktf",
-      "version": "0.19",
+      "version": "^0.19.0",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "10.3.0",
+      "version": "^10.3.0",
       "type": "peer"
     }
   ],
