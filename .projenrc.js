@@ -17,6 +17,7 @@ const project = new CdktfProviderProject({
   publishToNuget: false,
   publishToPypi: false,
   releaseToNpm: true,
+  releaseFailureIssue: false,
   repositoryUrl: "https://github.com/chrisr/cdktf-provider-neon.git",
   terraformProvider: "kislerdm/neon@~> 0.2",
   description: "CDKTF provider for kislerdm/neon",
