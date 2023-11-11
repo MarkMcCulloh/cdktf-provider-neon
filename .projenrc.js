@@ -10,7 +10,9 @@ const project = new CdktfProviderProject({
   jsiiVersion: "^5.0.0",
   name: "@rybickic/provider-neon",
   projenrcTs: false,
-  repositoryUrl: "https://github.com/chrisr/provider-neon.git",
+  githubNamespace: "Chriscbr",
+  releaseToNpm: true,
+  repositoryUrl: "https://github.com/chrisr/cdktf-provider-neon.git",
   terraformProvider: "kislerdm/neon@~> 0.2",
   description: "CDKTF provider for kislerdm/neon",
 });

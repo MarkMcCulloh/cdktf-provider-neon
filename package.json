@@ -1,9 +1,9 @@
 {
-  "name": "@cdktf/provider-neon",
+  "name": "@Chriscbr/provider-neon",
   "description": "Prebuilt neon Provider for Terraform CDK (cdktf)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cdktf/cdktf-provider-neon.git"
+    "url": "https://github.com/Chriscbr/cdktf-provider-neon.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -95,15 +95,15 @@
         }
       },
       "python": {
-        "distName": "cdktf-cdktf-provider-neon",
-        "module": "cdktf_cdktf_provider_neon"
+        "distName": "Chriscbr-cdktf-provider-neon",
+        "module": "Chriscbr_cdktf_provider_neon"
       },
       "dotnet": {
         "namespace": "HashiCorp.Cdktf.Providers.Neon",
         "packageId": "HashiCorp.Cdktf.Providers.Neon"
       },
       "go": {
-        "moduleName": "github.com/cdktf/cdktf-provider-neon-go",
+        "moduleName": "github.com/Chriscbr/cdktf-provider-neon-go",
         "packageName": "neon"
       }
     },

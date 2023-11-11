@@ -9,15 +9,15 @@ This repo builds and publishes the Terraform neon Provider bindings for [CDK for
 
 ### NPM
 
-The npm package is available at [https://www.npmjs.com/package/@cdktf/provider-neon](https://www.npmjs.com/package/@cdktf/provider-neon).
+The npm package is available at [https://www.npmjs.com/package/@Chriscbr/provider-neon](https://www.npmjs.com/package/@Chriscbr/provider-neon).
 
-`npm install @cdktf/provider-neon`
+`npm install @Chriscbr/provider-neon`
 
 ### PyPI
 
-The PyPI package is available at [https://pypi.org/project/cdktf-cdktf-provider-neon](https://pypi.org/project/cdktf-cdktf-provider-neon).
+The PyPI package is available at [https://pypi.org/project/Chriscbr-cdktf-provider-neon](https://pypi.org/project/Chriscbr-cdktf-provider-neon).
 
-`pipenv install cdktf-cdktf-provider-neon`
+`pipenv install Chriscbr-cdktf-provider-neon`
 
 ### Nuget
 
@@ -40,9 +40,9 @@ The Maven package is available at [https://mvnrepository.com/artifact/com.hashic
 
 ### Go
 
-The go package is generated into the [`github.com/cdktf/cdktf-provider-neon-go`](https://github.com/cdktf/cdktf-provider-neon-go) package.
+The go package is generated into the [`github.com/Chriscbr/cdktf-provider-neon-go`](https://github.com/Chriscbr/cdktf-provider-neon-go) package.
 
-`go get github.com/cdktf/cdktf-provider-neon-go/neon`
+`go get github.com/Chriscbr/cdktf-provider-neon-go/neon`
 
 ## Docs
 
