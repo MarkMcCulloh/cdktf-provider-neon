@@ -113,7 +113,7 @@
       "description": "Generate documentation for the project",
       "steps": [
         {
-          "exec": "rm -rf docs && rm -f API.md && mkdir docs && jsii-docgen --split-by-submodule -l typescript -l python -l java -l csharp -l go && mv *.*.md docs && cd docs && ls ./ | xargs sed -i '150000,$ d' $1"
+          "exec": "jsii-docgen -l typescript"
         }
       ]
     },

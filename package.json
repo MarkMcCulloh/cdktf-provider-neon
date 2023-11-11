@@ -1,5 +1,5 @@
 {
-  "name": "@Chriscbr/provider-neon",
+  "name": "@rybickic/cdktf-provider-neon",
   "description": "Prebuilt neon Provider for Terraform CDK (cdktf)",
   "repository": {
     "type": "git",

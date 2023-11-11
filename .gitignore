@@ -62,6 +62,6 @@ package-lock.json
 !/.github/workflows/force-release.yml
 !/.github/CODEOWNERS
 !/scripts/should-release.js
-API.md
 !/docs/*.md
 !/.copywrite.hcl
+!API.md
