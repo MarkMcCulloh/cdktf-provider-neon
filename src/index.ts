@@ -3,6 +3,12 @@ export * as branch from './branch';
 export * as database from './database';
 export * as endpoint from './endpoint';
 export * as project from './project';
+export * as projectPermission from './project-permission';
 export * as role from './role';
+export * as dataNeonBranchEndpoints from './data-neon-branch-endpoints';
+export * as dataNeonBranchRolePassword from './data-neon-branch-role-password';
+export * as dataNeonBranchRoles from './data-neon-branch-roles';
+export * as dataNeonBranches from './data-neon-branches';
+export * as dataNeonProject from './data-neon-project';
 export * as provider from './provider';
 

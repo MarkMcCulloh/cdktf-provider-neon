@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch
+// https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,39 +10,39 @@ export interface BranchConfig extends cdktf.TerraformMetaArguments {
   /**
   * Branch name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#name Branch#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#name Branch#name}
   */
   readonly name?: string;
   /**
   * ID of the branch to checkout.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#parent_id Branch#parent_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#parent_id Branch#parent_id}
   */
   readonly parentId?: string;
   /**
   * Log Sequence Number (LSN) horizon for the data to be present in the new branch.
   * See details: https://neon.tech/docs/reference/glossary/#lsn
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#parent_lsn Branch#parent_lsn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#parent_lsn Branch#parent_lsn}
   */
   readonly parentLsn?: string;
   /**
-  * Timestamp horizon for the data to be present in the new branch. 
+  * Timestamp horizon for the data to be present in the new branch.
   * **Note**: it's defined as Unix epoch.'
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#parent_timestamp Branch#parent_timestamp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#parent_timestamp Branch#parent_timestamp}
   */
   readonly parentTimestamp?: number;
   /**
   * Project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#project_id Branch#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#project_id Branch#project_id}
   */
   readonly projectId: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch neon_branch}
+* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch neon_branch}
 */
 export class Branch extends cdktf.TerraformResource {
 
@@ -58,7 +58,7 @@ export class Branch extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Branch resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Branch to import
-  * @param importFromId The id of the existing Branch that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Branch that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Branch to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -70,7 +70,7 @@ export class Branch extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/branch neon_branch} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/branch neon_branch} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -81,7 +81,7 @@ export class Branch extends cdktf.TerraformResource {
       terraformResourceType: 'neon_branch',
       terraformGeneratorMetadata: {
         providerName: 'neon',
-        providerVersion: '0.2.5',
+        providerVersion: '0.5.0',
         providerVersionConstraint: '~> 0.2'
       },
       provider: config.provider,
@@ -202,5 +202,43 @@ export class Branch extends cdktf.TerraformResource {
       parent_timestamp: cdktf.numberToTerraform(this._parentTimestamp),
       project_id: cdktf.stringToTerraform(this._projectId),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_id: {
+        value: cdktf.stringToHclTerraform(this._parentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_lsn: {
+        value: cdktf.stringToHclTerraform(this._parentLsn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_timestamp: {
+        value: cdktf.numberToHclTerraform(this._parentTimestamp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

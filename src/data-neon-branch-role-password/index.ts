@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database
+// https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -6,62 +6,56 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface DatabaseConfig extends cdktf.TerraformMetaArguments {
+export interface DataNeonBranchRolePasswordConfig extends cdktf.TerraformMetaArguments {
   /**
   * Branch ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#branch_id Database#branch_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password#branch_id DataNeonBranchRolePassword#branch_id}
   */
   readonly branchId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#id Database#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password#id DataNeonBranchRolePassword#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Database name.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#name Database#name}
-  */
-  readonly name: string;
-  /**
-  * Role name of the database owner.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#owner_name Database#owner_name}
-  */
-  readonly ownerName: string;
-  /**
   * Project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#project_id Database#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password#project_id DataNeonBranchRolePassword#project_id}
   */
   readonly projectId: string;
+  /**
+  * Role name.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password#role_name DataNeonBranchRolePassword#role_name}
+  */
+  readonly roleName: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database neon_database}
+* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password neon_branch_role_password}
 */
-export class Database extends cdktf.TerraformResource {
+export class DataNeonBranchRolePassword extends cdktf.TerraformDataSource {
 
   // =================
   // STATIC PROPERTIES
   // =================
-  public static readonly tfResourceType = "neon_database";
+  public static readonly tfResourceType = "neon_branch_role_password";
 
   // ==============
   // STATIC Methods
   // ==============
   /**
-  * Generates CDKTF code for importing a Database resource upon running "cdktf plan <stack-name>"
+  * Generates CDKTF code for importing a DataNeonBranchRolePassword resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
-  * @param importToId The construct id used in the generated config for the Database to import
-  * @param importFromId The id of the existing Database that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database#import import section} in the documentation of this resource for the id to use
-  * @param provider? Optional instance of the provider where the Database to import is found
+  * @param importToId The construct id used in the generated config for the DataNeonBranchRolePassword to import
+  * @param importFromId The id of the existing DataNeonBranchRolePassword that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataNeonBranchRolePassword to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
-        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "neon_database", importId: importFromId, provider });
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "neon_branch_role_password", importId: importFromId, provider });
       }
 
   // ===========
@@ -69,15 +63,15 @@ export class Database extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/database neon_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/data-sources/branch_role_password neon_branch_role_password} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options DatabaseConfig
+  * @param options DataNeonBranchRolePasswordConfig
   */
-  public constructor(scope: Construct, id: string, config: DatabaseConfig) {
+  public constructor(scope: Construct, id: string, config: DataNeonBranchRolePasswordConfig) {
     super(scope, id, {
-      terraformResourceType: 'neon_database',
+      terraformResourceType: 'neon_branch_role_password',
       terraformGeneratorMetadata: {
         providerName: 'neon',
         providerVersion: '0.5.0',
@@ -93,9 +87,8 @@ export class Database extends cdktf.TerraformResource {
     });
     this._branchId = config.branchId;
     this._id = config.id;
-    this._name = config.name;
-    this._ownerName = config.ownerName;
     this._projectId = config.projectId;
+    this._roleName = config.roleName;
   }
 
   // ==========
@@ -131,30 +124,9 @@ export class Database extends cdktf.TerraformResource {
     return this._id;
   }
 
-  // name - computed: false, optional: false, required: true
-  private _name?: string; 
-  public get name() {
-    return this.getStringAttribute('name');
-  }
-  public set name(value: string) {
-    this._name = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get nameInput() {
-    return this._name;
-  }
-
-  // owner_name - computed: false, optional: false, required: true
-  private _ownerName?: string; 
-  public get ownerName() {
-    return this.getStringAttribute('owner_name');
-  }
-  public set ownerName(value: string) {
-    this._ownerName = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ownerNameInput() {
-    return this._ownerName;
+  // password - computed: true, optional: false, required: false
+  public get password() {
+    return this.getStringAttribute('password');
   }
 
   // project_id - computed: false, optional: false, required: true
@@ -170,6 +142,19 @@ export class Database extends cdktf.TerraformResource {
     return this._projectId;
   }
 
+  // role_name - computed: false, optional: false, required: true
+  private _roleName?: string; 
+  public get roleName() {
+    return this.getStringAttribute('role_name');
+  }
+  public set roleName(value: string) {
+    this._roleName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get roleNameInput() {
+    return this._roleName;
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -178,9 +163,8 @@ export class Database extends cdktf.TerraformResource {
     return {
       branch_id: cdktf.stringToTerraform(this._branchId),
       id: cdktf.stringToTerraform(this._id),
-      name: cdktf.stringToTerraform(this._name),
-      owner_name: cdktf.stringToTerraform(this._ownerName),
       project_id: cdktf.stringToTerraform(this._projectId),
+      role_name: cdktf.stringToTerraform(this._roleName),
     };
   }
 
@@ -198,20 +182,14 @@ export class Database extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
-      name: {
-        value: cdktf.stringToHclTerraform(this._name),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
-      owner_name: {
-        value: cdktf.stringToHclTerraform(this._ownerName),
-        isBlock: false,
-        type: "simple",
-        storageClassType: "string",
-      },
       project_id: {
         value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_name: {
+        value: cdktf.stringToHclTerraform(this._roleName),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

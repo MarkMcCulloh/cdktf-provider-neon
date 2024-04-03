@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs
+// https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,19 +10,19 @@ export interface NeonProviderConfig {
   /**
   * API access key. Default is read from the environment variable `NEON_API_KEY`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs#api_key NeonProvider#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs#api_key NeonProvider#api_key}
   */
   readonly apiKey?: string;
   /**
   * Alias name
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs#alias NeonProvider#alias}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs#alias NeonProvider#alias}
   */
   readonly alias?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs neon}
+* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs neon}
 */
 export class NeonProvider extends cdktf.TerraformProvider {
 
@@ -38,7 +38,7 @@ export class NeonProvider extends cdktf.TerraformProvider {
   * Generates CDKTF code for importing a NeonProvider resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NeonProvider to import
-  * @param importFromId The id of the existing NeonProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NeonProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NeonProvider to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -50,7 +50,7 @@ export class NeonProvider extends cdktf.TerraformProvider {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs neon} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs neon} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -61,7 +61,7 @@ export class NeonProvider extends cdktf.TerraformProvider {
       terraformResourceType: 'neon',
       terraformGeneratorMetadata: {
         providerName: 'neon',
-        providerVersion: '0.2.5',
+        providerVersion: '0.5.0',
         providerVersionConstraint: '~> 0.2'
       },
       terraformProviderSource: 'kislerdm/neon'
@@ -115,5 +115,25 @@ export class NeonProvider extends cdktf.TerraformProvider {
       api_key: cdktf.stringToTerraform(this._apiKey),
       alias: cdktf.stringToTerraform(this._alias),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_key: {
+        value: cdktf.stringToHclTerraform(this._apiKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alias: {
+        value: cdktf.stringToHclTerraform(this._alias),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

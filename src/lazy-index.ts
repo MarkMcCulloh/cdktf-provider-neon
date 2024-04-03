@@ -3,6 +3,12 @@ Object.defineProperty(exports, 'branch', { get: function () { return require('./
 Object.defineProperty(exports, 'database', { get: function () { return require('./database'); } });
 Object.defineProperty(exports, 'endpoint', { get: function () { return require('./endpoint'); } });
 Object.defineProperty(exports, 'project', { get: function () { return require('./project'); } });
+Object.defineProperty(exports, 'projectPermission', { get: function () { return require('./project-permission'); } });
 Object.defineProperty(exports, 'role', { get: function () { return require('./role'); } });
+Object.defineProperty(exports, 'dataNeonBranchEndpoints', { get: function () { return require('./data-neon-branch-endpoints'); } });
+Object.defineProperty(exports, 'dataNeonBranchRolePassword', { get: function () { return require('./data-neon-branch-role-password'); } });
+Object.defineProperty(exports, 'dataNeonBranchRoles', { get: function () { return require('./data-neon-branch-roles'); } });
+Object.defineProperty(exports, 'dataNeonBranches', { get: function () { return require('./data-neon-branches'); } });
+Object.defineProperty(exports, 'dataNeonProject', { get: function () { return require('./data-neon-project'); } });
 Object.defineProperty(exports, 'provider', { get: function () { return require('./provider'); } });
 

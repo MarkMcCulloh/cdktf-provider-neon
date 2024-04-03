@@ -3,7 +3,7 @@ const { CdktfProviderProject } = require("@cdktf/provider-project");
 const project = new CdktfProviderProject({
   author: "Chris Rybicki",
   authorAddress: "crybicki98@gmail.com",
-  cdktfVersion: "^0.19.0",
+  cdktfVersion: "^0.20.6",
   constructsVersion: "^10.3.0",
   defaultReleaseBranch: "main",
   devDeps: ["@cdktf/provider-project@^0.3.0"],

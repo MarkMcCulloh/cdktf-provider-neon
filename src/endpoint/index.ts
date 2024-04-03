@@ -1,4 +1,4 @@
-// https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint
+// https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface EndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#autoscaling_limit_max_cu Endpoint#autoscaling_limit_max_cu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#autoscaling_limit_max_cu Endpoint#autoscaling_limit_max_cu}
   */
   readonly autoscalingLimitMaxCu?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#autoscaling_limit_min_cu Endpoint#autoscaling_limit_min_cu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#autoscaling_limit_min_cu Endpoint#autoscaling_limit_min_cu}
   */
   readonly autoscalingLimitMinCu?: number;
   /**
   * Branch ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#branch_id Endpoint#branch_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#branch_id Endpoint#branch_id}
   */
   readonly branchId: string;
   /**
@@ -26,64 +26,64 @@ export interface EndpointConfig extends cdktf.TerraformMetaArguments {
   * Specify the k8s-neonvm provisioner to create a compute endpoint that supports Autoscaling.
   * 
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#compute_provisioner Endpoint#compute_provisioner}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#compute_provisioner Endpoint#compute_provisioner}
   */
   readonly computeProvisioner?: string;
   /**
   * Disable the endpoint.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#disabled Endpoint#disabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#disabled Endpoint#disabled}
   */
   readonly disabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#pg_settings Endpoint#pg_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#pg_settings Endpoint#pg_settings}
   */
   readonly pgSettings?: { [key: string]: string };
   /**
   * Activate connection pooling.
   * See details: https://neon.tech/docs/connect/connection-pooling
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#pooler_enabled Endpoint#pooler_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#pooler_enabled Endpoint#pooler_enabled}
   */
   readonly poolerEnabled?: boolean | cdktf.IResolvable;
   /**
   * Mode of connections pooling.
   * See details: https://neon.tech/docs/connect/connection-pooling
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#pooler_mode Endpoint#pooler_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#pooler_mode Endpoint#pooler_mode}
   */
   readonly poolerMode?: string;
   /**
   * Project ID.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#project_id Endpoint#project_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#project_id Endpoint#project_id}
   */
   readonly projectId: string;
   /**
-  * AWS Region.
+  * Deployment region: https://neon.tech/docs/introduction/regions
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#region_id Endpoint#region_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#region_id Endpoint#region_id}
   */
   readonly regionId?: string;
   /**
-  * Duration of inactivity in seconds after which the compute endpoint is automatically suspended. 
+  * Duration of inactivity in seconds after which the compute endpoint is automatically suspended.
   * The value 0 means use the global default.
   * The value -1 means never suspend. The default value is 300 seconds (5 minutes).
   * The maximum value is 604800 seconds (1 week)
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#suspend_timeout_seconds Endpoint#suspend_timeout_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#suspend_timeout_seconds Endpoint#suspend_timeout_seconds}
   */
   readonly suspendTimeoutSeconds?: number;
   /**
   * Access type. **Note** that "read_write" is the only supported type yet.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#type Endpoint#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#type Endpoint#type}
   */
   readonly type?: string;
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint neon_endpoint}
+* Represents a {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint neon_endpoint}
 */
 export class Endpoint extends cdktf.TerraformResource {
 
@@ -99,7 +99,7 @@ export class Endpoint extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a Endpoint resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the Endpoint to import
-  * @param importFromId The id of the existing Endpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing Endpoint that should be imported. Refer to the {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the Endpoint to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -111,7 +111,7 @@ export class Endpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.2.5/docs/resources/endpoint neon_endpoint} Resource
+  * Create a new {@link https://registry.terraform.io/providers/kislerdm/neon/0.5.0/docs/resources/endpoint neon_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -122,7 +122,7 @@ export class Endpoint extends cdktf.TerraformResource {
       terraformResourceType: 'neon_endpoint',
       terraformGeneratorMetadata: {
         providerName: 'neon',
-        providerVersion: '0.2.5',
+        providerVersion: '0.5.0',
         providerVersionConstraint: '~> 0.2'
       },
       provider: config.provider,
@@ -238,7 +238,7 @@ export class Endpoint extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // pg_settings - computed: true, optional: true, required: false
+  // pg_settings - computed: false, optional: true, required: false
   private _pgSettings?: { [key: string]: string }; 
   public get pgSettings() {
     return this.getStringMapAttribute('pg_settings');
@@ -371,5 +371,85 @@ export class Endpoint extends cdktf.TerraformResource {
       suspend_timeout_seconds: cdktf.numberToTerraform(this._suspendTimeoutSeconds),
       type: cdktf.stringToTerraform(this._type),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      autoscaling_limit_max_cu: {
+        value: cdktf.numberToHclTerraform(this._autoscalingLimitMaxCu),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      autoscaling_limit_min_cu: {
+        value: cdktf.numberToHclTerraform(this._autoscalingLimitMinCu),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      branch_id: {
+        value: cdktf.stringToHclTerraform(this._branchId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compute_provisioner: {
+        value: cdktf.stringToHclTerraform(this._computeProvisioner),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disabled: {
+        value: cdktf.booleanToHclTerraform(this._disabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      pg_settings: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._pgSettings),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      pooler_enabled: {
+        value: cdktf.booleanToHclTerraform(this._poolerEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      pooler_mode: {
+        value: cdktf.stringToHclTerraform(this._poolerMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      project_id: {
+        value: cdktf.stringToHclTerraform(this._projectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      region_id: {
+        value: cdktf.stringToHclTerraform(this._regionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      suspend_timeout_seconds: {
+        value: cdktf.numberToHclTerraform(this._suspendTimeoutSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
